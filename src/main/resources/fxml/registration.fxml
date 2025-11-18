@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="8" alignment="CENTER" stylesheets="@../css/app.css" 
+      xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="app.controllers.RegistrationController">
+
+    <children>
+        <Label text="Register" styleClass="h1"/>
+
+        <HBox spacing="6">
+            <children>
+                <RadioButton fx:id="rbNGO" text="Organization (NGO)" selected="true">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="roleGroup"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="rbVolunteer" text="Individual (Volunteer)" toggleGroup="$roleGroup"/>
+            </children>
+        </HBox>
+
+        <TextField fx:id="tfUserid" promptText="User ID"/>
+        <TextField fx:id="tfName" promptText="Name"/>
+        <TextField fx:id="tfEmail" promptText="Email"/>
+
+        <!-- ⭐ NEW FIELD ADDED -->
+        <TextField fx:id="tfLocation" promptText="Location"/>
+
+        <PasswordField fx:id="pfPassword" promptText="Password"/>
+
+        <Button text="Register" onAction="#onRegister" maxWidth="Infinity"/>
+        <Label fx:id="lblMsg"/>
+        <Hyperlink text="Back to Login" onAction="#goToLogin"/>
+    </children>
+
+</VBox>

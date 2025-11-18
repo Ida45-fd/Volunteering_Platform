@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="8" xmlns:fx="http://javafx.com/fxml" fx:controller="app.controllers.VolunteerHomeController" stylesheets="@../css/app.css">
+<children>
+<Label fx:id="lblHeader" styleClass="h1"/>
+<Button text="Logout" onAction="#onLogout" alignment="CENTER_RIGHT"/>
+<TableView fx:id="table">
+<columns>
+<TableColumn fx:id="colName" text="Event" prefWidth="150"/>
+<TableColumn fx:id="colDate" text="Date" prefWidth="120"/>
+<TableColumn fx:id="colLoc" text="Location" prefWidth="150"/>
+<TableColumn fx:id="colVolunteer" text="Volunteer" prefWidth="150"/>
+<TableColumn fx:id="colRemaining" text="Remaining Slots" prefWidth="150"/>
+</columns>
+</TableView>
+<HBox spacing="8">
+<Button text="Book Selected" onAction="#onBookSelected"/>
+<Label fx:id="lblMsg"/>
+</HBox>
+</children>
+</VBox>
